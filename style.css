@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #25159d;
+    background-color: #25159d; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,15 +16,15 @@ body {
     color: #fafafa;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     padding-bottom: 20px;
-
 }
-/*ini buat ngatur bagian header nya*/
+
+/* --- HEADER / JUDUL --- */
 .cv-header {
-    text-align: center;
     padding: 20px 0 10px;
     color: #f1c40f;
     line-height: 1;
     position: relative;
+    text-align: center;
 }
 
 .cv-header h1 {
@@ -34,23 +34,24 @@ body {
     letter-spacing: 2px;
 }
 .cv-header h2 {
-    font: size 1.8em;
+    font-size: 1.8em; 
     font-weight: 700;
     margin-top: -5px;
     letter-spacing: 5px;
 }
 
-.cv-header h2::after, 
+.cv-header h2::after,
 .cv-header h2::before {
     content: '';
     display: inline-block;
     width: 50px;
-    height: 2px;
+    height: 3px; 
     background-color: #f1c40f;
     margin: 0 10px;
     vertical-align: middle;
 }
 
+/* --- LAYOUT UTAMA --- */
 .cv-content {
     display: flex;
     flex-wrap: wrap;
@@ -59,8 +60,8 @@ body {
 .cv-sidebar {
     flex: 1;
     min-width: 300px;
-    background-color: #34495e;
-    padding: 10px 30px
+    background-color: #34495e; 
+    padding: 10px 30px;
 }
 .cv-main {
     flex: 2;
@@ -68,26 +69,57 @@ body {
     padding: 20px 40px;
 }
 
-.profile {
-    width: 100px;
-    align-items: center;
-    height: 150px;
-    margin-bottom: 20px;
+.profile-hallo-wrapper {
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    margin-bottom: 25px; 
+}
+
+.hallo-section-sidebar {
+    flex: 1; 
+    text-align: left; 
+}
+.hallo-section-sidebar .judul-kanan {
+    font-size: 1.2em; 
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.hallo-section-sidebar .deskripsi-diri {
+    font-size: 0.85em; 
+    line-height: 1.4;
+}
+.hallo-section-sidebar .judul-kanan::before {
+    content: none; 
+
+}
+/* --- FOTO PROFIL --- */
+.Profile {
+    width: 120px; 
+    height: 120px;
     overflow: hidden;
     border-radius: 50%;
     border: 5px solid #f1c40f;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    flex-shrink: 0; 
+    margin: 0; 
 }
 
-.foto-profil {
+.Foto-profile {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* --- KONTAK  EDUKASI --- */
+.contact-info {
+    margin-bottom: 25px; 
+    text-align: left;
+}
 .contact-item {
     font-size: 0.95em;
     margin: 5px 0;
+    padding-left: 0; 
 }
 
 .contact-item .icon {
@@ -104,19 +136,20 @@ body {
     color: #f1c40f;
     font-size: 1.5em;
     font-weight: 700;
-    border-bottom: 3px solid;
+    border-bottom: 3px solid #f1c40f; 
     padding-bottom: 5px;
     margin-top: 25px;
     margin-bottom: 15px;
+    text-align: left;
 }
 
+/* --- JUDUL KANAN --- */
 .judul-kanan {
     color: #f1c40f;
     font-size: 1.8em;
     font-weight: 900;
     margin-bottom: 15px;
     position: relative;
-
 }
 
 .judul-kanan::before {
@@ -139,8 +172,12 @@ body {
 .pend-tahun{
     font-weight: bold;
     color: #bdc3c7;
-    margin: o;
-    font-size: 1.1em;
+    margin: 0; 
+    font-size: 0.9em; 
+}
+.pend-sekolah {
+     margin: 0;
+     font-size: 1.1em;
 }
 
 .experience {
@@ -155,7 +192,7 @@ body {
 
 .interest-grid {
     display: grid;
-    grid-template-columns: repeat (2, 1fr);
+    grid-template-columns: repeat(2, 1fr); 
     gap: 15px;
     text-align: center;
 }
@@ -174,6 +211,7 @@ body {
     font-size: 2em;
     margin-bottom: 5px;
 }
+
 
 .ability {
     margin-bottom: 15px;
@@ -196,17 +234,18 @@ body {
     border-radius: 5px 0 0 5px;
 }
 
-.skill-grid {
+
+.skills-grid { 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15 px;
+    gap: 15px; 
     text-align: center;
     margin-top: 20px;
 }
 
-.skill-icon-grup p {
+.skill-icon-group p { 
     margin-top: 5px;
-    font-size: 0.8 em;
+    font-size: 0.8em; 
     font-weight: bold;
 }
 
@@ -221,21 +260,22 @@ body {
     font-weight: 900;
     color: white;
     margin: 0 auto;
-
 }
 
 .ps { background-color: #0078d4; } 
-.ai { background-color: #9999ff; } 
+.ai { background-color: #ff8c00; } 
 .cdr { background-color: #f1c40f; color: #2c3e50; } 
 .pr { background-color: #6d6d9a; } 
 
-
+/* --- FOOTER  --- */
 .footer {
     text-align: center;
     margin-top: 30px;
+    padding-left: 20px; 
+    padding-right: 20px;
 }
 
-.footer-motto p {
+.footer p {
     background-color: #f1c40f;
     color: #2c3e50;
     padding: 10px 20px;
@@ -254,6 +294,15 @@ body {
     .cv-sidebar, .cv-main {
         min-width: 100%;
         padding: 20px;
+    }
+
+   
+    .profile-hallo-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hallo-section-sidebar {
+        text-align: center;
     }
 
     .skills-grid {
